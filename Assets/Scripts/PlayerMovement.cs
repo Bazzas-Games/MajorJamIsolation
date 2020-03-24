@@ -56,8 +56,11 @@ public class PlayerMovement : MonoBehaviour
     void Grab(GameObject obj)
     {
         heldObject = obj;
+        Collider2D c = heldObject.GetComponent<Collider2D>();
+        c.enabled = false;
         Rigidbody2D heldObjectRB = heldObject.GetComponent<Rigidbody2D>();
         heldObjectRB.isKinematic = true;
+       
         heldObject.transform.parent = holdPoint;
         heldObject.transform.localPosition = Vector3.zero;
         heldObject.transform.localRotation = Quaternion.identity;

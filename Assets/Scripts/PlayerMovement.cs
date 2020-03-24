@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public GameObject heldObject;
+    public float grabDistance = 1f;
+    private Rigidbody2D rb;
+
 
     void Start()
     {
@@ -13,13 +16,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        faceMouse();
+        FaceMouse();
         
     
     }
 
 
-    void faceMouse()
+    
+    
+
+
+    void FaceMouse()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -29,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         );
         transform.up = aimDir;
 
+
+    }
+
+    void Grab()
+    {
 
     }
 }

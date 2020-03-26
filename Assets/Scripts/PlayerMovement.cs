@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform holdPoint;
     public LayerMask grabbableObjects;
     public float grabDistance = 1f;
-    public float maxForce = 10f;
+    public float maxForce = 1000f;
     public float maxVel = 5f;
     public float pullbackDistance = 100000f;
     public float thrustForce = 1f;
@@ -55,17 +55,15 @@ public class PlayerMovement : MonoBehaviour
         {
             mouseClickPos = mousePos2D;
         }
+        if (Input.GetMouseButtonUp(1) && heldObject != null) // initiate throw
+        {
+            Throw();
+        }
         if (Input.GetMouseButton(1)) // charge throw
         {
             if (heldObject != null)
             {
-                dragDirection = Camera.main.WorldToScreenPoint(transform.position);
-                dragDirection = dragDirection - mouseClickPos;
-                dragDistRaw = Vector2.Dot(dragDirection, mousePos2D - mouseClickPos);
-                dragDist = Mathf.Clamp(dragDistRaw, 0, pullbackDistance);
-                dragMult = dragDist / pullbackDistance;
-                animator.SetBool("isDragging", true);
-                animator.SetFloat("Blend", dragMult);
+                Charge();
             }
             else FaceMouse();
         }
@@ -74,7 +72,16 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isDragging", false);
         }
     }
-
+    void Charge()
+    {
+        dragDirection = Camera.main.WorldToScreenPoint(transform.position);
+        dragDirection = dragDirection - mouseClickPos;
+        dragDistRaw = Vector2.Dot(dragDirection, mousePos2D - mouseClickPos);
+        dragDist = Mathf.Clamp(dragDistRaw, 0, pullbackDistance);
+        dragMult = dragDist / pullbackDistance;
+        animator.SetBool("isDragging", true);
+        animator.SetFloat("Blend", dragMult);
+    }
 
     void FaceMouse()
     {
@@ -87,8 +94,7 @@ public class PlayerMovement : MonoBehaviour
         heldObject = obj;
         Collider2D c = heldObject.GetComponent<Collider2D>();
         c.enabled = false;
-        Rigidbody2D heldObjectRB = heldObject.gameObject.GetComponent<Rigidbody2D>();
-        heldObjectRB.isKinematic = true;
+        heldObject.rb.isKinematic = true;
        
         heldObject.transform.parent = holdPoint;
         heldObject.transform.localPosition = Vector3.zero;
@@ -98,10 +104,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Throw()
     {
+        //float maxPossibleForce =
 
-        if (!heldObject.isAnchored)
-        {
+        heldObject.rb.isKinematic = false;
+        heldObject.transform.parent = null;
+        heldObject.GetComponent<Collider2D>().enabled = true;
+        heldObject.rb.AddForce(aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
+        rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
+        if (!heldObject.isAnchored) { }
 
-        }
+        heldObject = null;
     }
 }

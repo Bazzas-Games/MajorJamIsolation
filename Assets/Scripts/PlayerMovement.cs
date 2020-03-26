@@ -36,37 +36,41 @@ public class PlayerMovement : MonoBehaviour
         Vector2 thrusters = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         rb.AddForce(thrusters.normalized * thrustForce);
 
-
         mousePos2D = Input.mousePosition;
         if (Input.GetMouseButtonDown(0))  // grab object if left clicked
         {
             if(heldObject == null)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, grabbableObjects);
-                Debug.DrawRay(transform.position, aimDir.normalized);
                 if(hit.collider != null && hit.collider.GetComponent<Throwable>() != null)
                 {
                     Grab(hit.collider.gameObject.GetComponent<Throwable>());
-                    Debug.Log("Hit! " + hit.collider.gameObject.name);
                 }
             }
         }
-        if(Input.GetMouseButtonDown(1)) // start charging
+
+
+        if(Input.GetMouseButtonDown(1)) // keep track of click location
         {
             mouseClickPos = mousePos2D;
         }
-        if (Input.GetMouseButtonUp(1) && heldObject != null) // initiate throw
-        {
-            Throw();
-        }
-        if (Input.GetMouseButton(1)) // charge throw
+
+
+        if (Input.GetMouseButtonUp(1)) // initiate throw
         {
             if (heldObject != null)
-            {
-                Charge();
-            }
-            else FaceMouse();
+                Throw();
+            else
+                PushOffWall();
         }
+
+
+        if (Input.GetMouseButton(1)) // charge throw
+        {
+            Charge();
+        }
+
+
         else {          // unless charging a throw, face the mouse.
             FaceMouse();
             animator.SetBool("isDragging", false);
@@ -91,6 +95,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Grab(Throwable obj)
     {
+        // calculate velocity
+        Vector2 collisionVel = (obj.rb.mass * obj.rb.velocity + rb.mass * rb.velocity) / (obj.rb.mass + rb.mass);
+        rb.velocity = collisionVel;
+
         heldObject = obj;
         Collider2D c = heldObject.GetComponent<Collider2D>();
         c.enabled = false;
@@ -114,5 +122,10 @@ public class PlayerMovement : MonoBehaviour
         if (!heldObject.isAnchored) { }
 
         heldObject = null;
+    }
+
+    void PushOffWall()
+    {
+        
     }
 }

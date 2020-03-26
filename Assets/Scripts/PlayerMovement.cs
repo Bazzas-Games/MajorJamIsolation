@@ -61,11 +61,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 dragDirection = Camera.main.WorldToScreenPoint(transform.position);
                 dragDirection = dragDirection - mouseClickPos;
-                dragDistRaw = Vector2.Dot(mouseClickPos - dragDirection, mouseClickPos - mousePos2D);
+                dragDistRaw = Vector2.Dot(dragDirection, mousePos2D - mouseClickPos);
                 dragDist = Mathf.Clamp(dragDistRaw, 0, pullbackDistance);
                 dragMult = dragDist / pullbackDistance;
-
-                Debug.DrawLine(mouseClickPos, mouseClickPos - dragDirection, Color.blue);
                 animator.SetBool("isDragging", true);
                 animator.SetFloat("Blend", dragMult);
             }

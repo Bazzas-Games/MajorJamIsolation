@@ -337,7 +337,7 @@ MonoBehaviour:
   grabDistance: 1
   maxForce: 10
   maxVel: 5
-  pullbackDistance: 100000
+  pullbackDistance: 15000
   thrustForce: 0.1
 --- !u!70 &353040856
 CapsuleCollider2D:

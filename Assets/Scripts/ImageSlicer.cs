@@ -20,7 +20,6 @@ public class ImageSlicer : MonoBehaviour{
 				block.SetPixels(image.GetPixels(x*blockSize, y*blockSize, blockSize, blockSize));
 				block.Apply();
 				blocks[x,y] = block;
-
 			}
 		}
 

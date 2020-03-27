@@ -27,7 +27,7 @@ public class Puzzle : MonoBehaviour {
 
     void Update()
     {
-        if (state == PuzzleState.Solved && Input.GetKeyDown(Keycode.Space))
+        if (state == PuzzleState.Solved && Input.GetKeyDown(KeyCode.Space))
         {
             StartShuffle();  
 		}

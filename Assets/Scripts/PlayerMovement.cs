@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Throwable heldObject;
     public Transform holdPoint;
     public LayerMask grabbableObjects;
+    public LayerMask pushableWalls;
     public float grabDistance = 1f;
     public float maxForce = 1000f;
     public float maxVel = 5f;
@@ -119,13 +120,16 @@ public class PlayerMovement : MonoBehaviour
         heldObject.GetComponent<Collider2D>().enabled = true;
         heldObject.rb.AddForce(aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
         rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
-        if (!heldObject.isAnchored) { }
 
         heldObject = null;
     }
 
     void PushOffWall()
     {
-        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, pushableWalls);
+        if (hit.collider != null)
+        {
+            rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
+        }
     }
 }

@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 297926967}
   - component: {fileID: 297926966}
   - component: {fileID: 297926968}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,6 +469,9 @@ MonoBehaviour:
   grabbableObjects:
     serializedVersion: 2
     m_Bits: 256
+  pushableWalls:
+    serializedVersion: 2
+    m_Bits: 2048
   grabDistance: 1
   maxForce: 20
   maxVel: 5
@@ -803,7 +806,7 @@ GameObject:
   - component: {fileID: 898369756}
   - component: {fileID: 898369757}
   - component: {fileID: 898369758}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197088605}
   - component: {fileID: 1197088604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1472,7 @@ GameObject:
   - component: {fileID: 1654038321}
   - component: {fileID: 1654038322}
   - component: {fileID: 1654038323}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1577,7 +1580,7 @@ GameObject:
   - component: {fileID: 1783316910}
   - component: {fileID: 1783316911}
   - component: {fileID: 1783316912}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -33,12 +33,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // rotate item in hand
+        float s = Input.GetAxis("RotateHeld");
+        holdPoint.rotation = Quaternion.Euler(holdPoint.rotation.eulerAngles + new Vector3(0f, 0f, s));
+
+
         // Microthrusters
         Vector2 thrusters = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         rb.AddForce(thrusters.normalized * thrustForce);
 
         mousePos2D = Input.mousePosition;
-        if (Input.GetMouseButtonDown(0))  // grab object if left clicked
+        if (Input.GetButtonDown("Grab"))  // grab object if left clicked
         {
             if(heldObject == null)
             {
@@ -51,13 +56,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(Input.GetMouseButtonDown(1)) // keep track of click location
+        if(Input.GetButtonDown("Throw")) // keep track of click location
         {
             mouseClickPos = mousePos2D;
         }
 
 
-        if (Input.GetMouseButtonUp(1)) // initiate throw
+        if (Input.GetButtonUp("Throw")) // initiate throw
         {
             if (heldObject != null)
                 Throw();
@@ -66,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButton(1)) // charge throw
+        if (Input.GetButton("Throw")) // charge throw
         {
             Charge();
         }
@@ -96,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Grab(Throwable obj)
     {
+        holdPoint.rotation = Quaternion.identity;
+
+
         // calculate velocity
         Vector2 collisionVel = (obj.rb.mass * obj.rb.velocity + rb.mass * rb.velocity) / (obj.rb.mass + rb.mass);
         rb.velocity = collisionVel;
@@ -104,8 +112,11 @@ public class PlayerMovement : MonoBehaviour
         Collider2D c = heldObject.GetComponent<Collider2D>();
         c.enabled = false;
         heldObject.rb.isKinematic = true;
-       
+        heldObject.rb.angularVelocity = 0f;
+
         heldObject.transform.parent = holdPoint;
+        heldObject.rb.velocity = Vector3.zero;
+
         heldObject.transform.localPosition = Vector3.zero;
         heldObject.transform.localRotation = Quaternion.identity;
     }
@@ -113,9 +124,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Throw()
     {
-        //float maxPossibleForce =
+        holdPoint.rotation = Quaternion.identity;
 
         heldObject.rb.isKinematic = false;
+        heldObject.rb.velocity = rb.velocity;
         heldObject.transform.parent = null;
         heldObject.GetComponent<Collider2D>().enabled = true;
         heldObject.rb.AddForce(aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);

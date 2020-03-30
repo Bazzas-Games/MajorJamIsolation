@@ -124,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Throw()
     {
-        holdPoint.rotation = Quaternion.identity;
 
         heldObject.rb.isKinematic = false;
         heldObject.rb.velocity = rb.velocity;
@@ -132,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
         heldObject.GetComponent<Collider2D>().enabled = true;
         heldObject.rb.AddForce(aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
         rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
+        holdPoint.rotation = Quaternion.identity;
 
         heldObject = null;
     }

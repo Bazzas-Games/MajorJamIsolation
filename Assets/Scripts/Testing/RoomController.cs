@@ -5,23 +5,24 @@ using UnityEngine;
 public class RoomController : MonoBehaviour
 {
 
-    private List<ContactPoint2D> contacts;
-
+    private List<ContactPoint2D> contacts = new List<ContactPoint2D>();
+    private int test = 0;
     public bool oxygen;
 
-    // Update is called once per frame
-    void Update()
+    
+    void FixedUpdate()
     {
-        
-        if(contacts.Count <= 0) oxygen = true;
+        Debug.Log(test);
+
+        test = 0;
     }
+
+   
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        collision.GetContacts(contacts);
-        Debug.DrawLine(transform.position, new Vector2(10,10), Color.green);
-        Debug.Log("Is Colliding");
 
+        test = 1;
 	}
 
 }

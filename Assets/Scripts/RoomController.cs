@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    public Breach[] breaches;
+    public HullBreach[] breaches;
     public bool hasOxygen;
 
     
@@ -13,10 +13,11 @@ public class RoomController : MonoBehaviour
         bool hasHoles = false;
 
         hasHoles = false;
-        foreach(Breach b in breaches)
+        foreach(HullBreach b in breaches)
         {
             if(b.isBroken) hasHoles = true;
 		}
+        hasOxygen = !hasHoles;
     }
 
     void OnTriggerStay2D(Collider2D collision)

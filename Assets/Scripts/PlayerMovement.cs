@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform holdPoint;
     public LayerMask grabbableObjects;
     public LayerMask pushableWalls;
+    public LayerMask breachLayer;
     public float grabDistance = 1f;
     public float maxForce = 1000f;
     public float maxVel = 5f;
@@ -49,12 +50,19 @@ public class PlayerMovement : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, grabbableObjects);
                 if(hit.collider != null && hit.collider.GetComponent<Throwable>() != null)
                 {
+                    
                     Grab(hit.collider.gameObject.GetComponent<Throwable>());
                 }
             }
             else if (heldObject.canPatchBreach)
             {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, LayerMask.GetMask("Breach"));
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, breachLayer);
+                
+                if (hit.collider != null)
+                {
+                    if(hit.collider.GetComponent<HullBreach>().isBroken == true)
+                    PatchBreach(hit.collider.GetComponent<HullBreach>());
+                }
             }
         }
 
@@ -155,5 +163,15 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
         }
+    }
+
+
+    void PatchBreach(HullBreach hullBreach)
+    {
+        hullBreach.isBroken = false;
+        heldObject.transform.position = hullBreach.transform.position + new Vector3(0, 0, -1);
+        heldObject.transform.parent = null;
+        heldObject.enabled = false;
+        heldObject = null;
     }
 }

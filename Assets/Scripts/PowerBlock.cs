@@ -27,7 +27,7 @@ public class PowerBlock : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision)
+    
         if(collision.otherCollider.gameObject.layer == LayerMask.NameToLayer("PowerConnectors")){
             Debug.Log("Collided with connector");
         }

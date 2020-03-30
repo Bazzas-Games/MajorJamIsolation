@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     private float dragDist = 0; // clamped distance from mouse to click point, 0 - dragInputScale
     private float dragMult = 0; // 0 - 1, how close is mouse to dragInputScale?
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -52,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Grab(hit.collider.gameObject.GetComponent<Throwable>());
                 }
+            }
+            else if (heldObject.canPatchBreach)
+            {
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, LayerMask.GetMask("Breach"));
             }
         }
 
@@ -107,6 +110,10 @@ public class PlayerMovement : MonoBehaviour
         // calculate velocity
         Vector2 collisionVel = (obj.rb.mass * obj.rb.velocity + rb.mass * rb.velocity) / (obj.rb.mass + rb.mass);
         rb.velocity = collisionVel;
+        foreach(Collider2D childCollider in obj.gameObject.GetComponentsInChildren<Collider2D>())
+        {
+            childCollider.enabled = false;
+        }
 
         heldObject = obj;
         Collider2D c = heldObject.GetComponent<Collider2D>();
@@ -129,6 +136,11 @@ public class PlayerMovement : MonoBehaviour
         heldObject.rb.velocity = rb.velocity;
         heldObject.transform.parent = null;
         heldObject.GetComponent<Collider2D>().enabled = true;
+        foreach(Collider2D c in heldObject.GetComponentsInChildren<Collider2D>())
+        {
+            c.enabled = true;
+        }
+
         heldObject.rb.AddForce(aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
         rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
         holdPoint.rotation = Quaternion.identity;

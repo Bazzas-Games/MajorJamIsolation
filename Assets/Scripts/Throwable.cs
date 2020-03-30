@@ -6,7 +6,7 @@ public class Throwable : MonoBehaviour
 {
     public bool isAnchored = false;
     public Rigidbody2D rb;
-
+    public bool canPatchBreach = false;
 
     void Start()
     {

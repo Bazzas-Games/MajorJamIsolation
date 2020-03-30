@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-
-    private List<ContactPoint2D> contacts = new List<ContactPoint2D>();
-    private int test = 0;
-    public bool oxygen;
+    public Breach[] breaches;
+    public bool hasOxygen;
 
     
-    void FixedUpdate()
+    void Update()
     {
-        Debug.Log(test);
+        bool hasHoles = false;
 
-        test = 0;
+        hasHoles = false;
+        foreach(Breach b in breaches)
+        {
+            if(b.isBroken) hasHoles = true;
+		}
     }
-
-   
 
     void OnTriggerStay2D(Collider2D collision)
     {
-
-        test = 1;
+        
 	}
 
 }

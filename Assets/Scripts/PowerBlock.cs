@@ -5,13 +5,17 @@ using UnityEngine;
 public class PowerBlock : MonoBehaviour
 {
     public bool isPowered = false;
+    public bool coolingDown = false;
     BoxCollider2D[] connectors;
-    public Collider2D otherPoweredConnector;
-    public Collider2D receivingPowerConnector;
+    public Collider2D prev;
+    public List<Collider2D> next = new List<Collider2D>();
+    public bool isPowerSource = false;
 
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         connectors = GetComponentsInChildren<BoxCollider2D>();
         foreach(BoxCollider2D b in connectors)
         {
@@ -21,68 +25,109 @@ public class PowerBlock : MonoBehaviour
     }
 
     
-
-    // Update is called once per frame
     void Update()
     {
+        if (isPowerSource) isPowered = true;
         CheckPower();
     }
     
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.otherCollider.gameObject.layer == LayerMask.NameToLayer("PowerConnectors")){
-            if (isPowered)
+        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("PowerConnectors")&& 
+            !isPowered && !coolingDown &&
+            collision.rigidbody.GetComponent<PowerBlock>().isPowered){
+            if (collision.collider.GetComponentInParent<PowerBlock>().isPowered)
             {
                 ConnectPower(collision);
             }
         }
     }
 
-
-    void CheckPower()
+    void OnCollisionExit2D(Collision2D collision)
     {
-        bool prevPowered = isPowered;
-        isPowered = GetComponentInParent<PowerSource>() != null;
-        if (prevPowered && !isPowered) DisconnectPower();
+        if(coolingDown && collision.collider.gameObject.layer == LayerMask.NameToLayer("PowerConnectors"))
+        {
+            coolingDown = false;
+        }
     }
+
+
+    public void CheckPower()
+    {
+        if (!isPowerSource)
+        {
+            if (isPowered && prev == null) DisconnectPower();
+        }
+    }
+
 
     void ConnectPower(Collision2D collision)
     {
-        Debug.Log("called from "+ name + ", unpowered cable " + collision.rigidbody.name + collision.collider.name+ ", connecting to power source " + collision.otherRigidbody.name + collision.otherCollider.name);
-        PowerBlock otherPowerBlock = collision.rigidbody.GetComponent<PowerBlock>();
-        otherPowerBlock.receivingPowerConnector = collision.otherCollider;
-        otherPowerBlock.otherPoweredConnector = collision.collider;
+        Debug.Log("called from "+ name + ", unpowered cable " + collision.otherRigidbody.name + "_" + collision.otherCollider.name+ ", connecting to power source " + collision.rigidbody.name + "_" + collision.collider.name);
+        Rigidbody2D unpoweredRb = collision.otherRigidbody;
+        Rigidbody2D poweredRb = collision.rigidbody;
+        Collider2D unpoweredCol = collision.otherCollider;
+        Collider2D poweredCol = collision.collider;
+        PowerBlock unpoweredBlock = unpoweredRb.GetComponent<PowerBlock>();
+        PowerBlock poweredBlock = poweredRb.GetComponent<PowerBlock>();
 
-        collision.otherRigidbody.velocity = Vector2.zero;
-        collision.rigidbody.velocity = Vector2.zero;
-        collision.otherRigidbody.angularVelocity = 0;
-        collision.rigidbody.angularVelocity = 0;
-        collision.otherRigidbody.isKinematic = true;
-        collision.rigidbody.isKinematic = true;
-        Vector3 rot = collision.rigidbody.transform.rotation.eulerAngles;
+
+        // physically lock 
+        unpoweredRb.velocity = Vector2.zero;
+        unpoweredRb.angularVelocity = 0;
+        unpoweredRb.isKinematic = true;
+        poweredRb.velocity = Vector2.zero;
+        poweredRb.angularVelocity = 0;
+        poweredRb.isKinematic = true;
+
+        Vector3 rot = unpoweredRb.transform.rotation.eulerAngles;
         rot.z = Mathf.Round(rot.z / 90) * 90;
-        collision.rigidbody.transform.eulerAngles = rot;
+        unpoweredRb.transform.eulerAngles = rot;
+        unpoweredRb.transform.parent = poweredCol.transform;
+        unpoweredRb.transform.localPosition = Vector2.zero;
+        // end lock
 
-        collision.rigidbody.transform.parent = collision.otherCollider.transform;
-        collision.rigidbody.transform.localPosition = Vector2.zero;
+        // disable only the two connected colliders
+        unpoweredCol.enabled = false;
+        poweredCol.enabled = false;
 
-        collision.collider.enabled = false;
-        collision.otherCollider.enabled = false;
+        // store references to each collider object for disconnect later
+        unpoweredBlock.prev = poweredCol;
+        poweredBlock.next.Add(unpoweredCol);
+
+        // power up block
+        unpoweredBlock.isPowered = true;
     }
 
 
-    void DisconnectPower()
+    public void DisconnectPower()
     {
-        Debug.Log(name + " has disconnected from the power source.");
-        foreach(PowerBlock p in GetComponentsInChildren<PowerBlock>())
-        {
-            p.gameObject.transform.parent = null;
-            foreach(BoxCollider2D b in p.connectors)
-            {
-                if (b.GetComponentInChildren<PowerBlock>() == null)
-                    b.enabled = true;
-            }
-        }
+        coolingDown = true;
+        Debug.Log("Disconnect called on " + name);
+        isPowered = false;
 
+        // turn on all of this block's colliders
+        foreach (BoxCollider2D b in connectors)
+        {
+            b.enabled = true;
+        }
+        
+        // turn on prev collider
+        if(prev != null) prev.enabled = true;
+        prev = null;
+
+        // call DisconnectPower on any subsequent blocks
+        for (int i = next.Count - 1; i >=0; i--)
+        {
+            Collider2D c = next[i];
+            next.Remove(c);
+            c.GetComponentInParent<PowerBlock>().DisconnectPower();
+        }
+        
+
+        // physically unlock
+        transform.parent = null;
+        rb.isKinematic = false;        
     }
 }

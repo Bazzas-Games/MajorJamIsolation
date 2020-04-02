@@ -113,8 +113,12 @@ public class PlayerMovement : MonoBehaviour
     void Grab(Throwable obj)
     {
         holdPoint.rotation = Quaternion.identity;
-
-
+        PowerBlock pb = obj.GetComponent<PowerBlock>();
+        if(pb != null && pb.isPowered)
+        {
+            pb.DisconnectPower();
+            return;
+        }
         // calculate velocity
         Vector2 collisionVel = (obj.rb.mass * obj.rb.velocity + rb.mass * rb.velocity) / (obj.rb.mass + rb.mass);
         rb.velocity = collisionVel;

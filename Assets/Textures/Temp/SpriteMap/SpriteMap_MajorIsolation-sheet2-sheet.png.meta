@@ -1,0 +1,1460 @@
+fileFormatVersion: 2
+guid: 297b4c15a0925b041a9d4f1b8f18209b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2600923766631781714
+    second: SpriteMap_MajorIsolation-sheet2-sheet_0
+  - first:
+      213: -4719173095281003571
+    second: SpriteMap_MajorIsolation-sheet2-sheet_1
+  - first:
+      213: -1194764104987074772
+    second: SpriteMap_MajorIsolation-sheet2-sheet_2
+  - first:
+      213: 6027930351561886208
+    second: SpriteMap_MajorIsolation-sheet2-sheet_3
+  - first:
+      213: -3856870288447464078
+    second: SpriteMap_MajorIsolation-sheet2-sheet_4
+  - first:
+      213: -5353281511740415846
+    second: SpriteMap_MajorIsolation-sheet2-sheet_5
+  - first:
+      213: -2769604034806769932
+    second: SpriteMap_MajorIsolation-sheet2-sheet_6
+  - first:
+      213: -8124134367644801364
+    second: SpriteMap_MajorIsolation-sheet2-sheet_7
+  - first:
+      213: -1332998337623969532
+    second: SpriteMap_MajorIsolation-sheet2-sheet_8
+  - first:
+      213: -5724277961060607263
+    second: SpriteMap_MajorIsolation-sheet2-sheet_9
+  - first:
+      213: 9127247748848927631
+    second: SpriteMap_MajorIsolation-sheet2-sheet_10
+  - first:
+      213: -5983558194041830793
+    second: SpriteMap_MajorIsolation-sheet2-sheet_11
+  - first:
+      213: 1814726526515919013
+    second: SpriteMap_MajorIsolation-sheet2-sheet_12
+  - first:
+      213: 3441417184955578285
+    second: SpriteMap_MajorIsolation-sheet2-sheet_13
+  - first:
+      213: -7775683566488005160
+    second: SpriteMap_MajorIsolation-sheet2-sheet_14
+  - first:
+      213: -2867381918255812324
+    second: SpriteMap_MajorIsolation-sheet2-sheet_15
+  - first:
+      213: 3713807944838160587
+    second: SpriteMap_MajorIsolation-sheet2-sheet_16
+  - first:
+      213: 6735175687914691269
+    second: SpriteMap_MajorIsolation-sheet2-sheet_17
+  - first:
+      213: 7045035752911997354
+    second: SpriteMap_MajorIsolation-sheet2-sheet_18
+  - first:
+      213: 4966454426388542063
+    second: SpriteMap_MajorIsolation-sheet2-sheet_19
+  - first:
+      213: -3537999727746676195
+    second: SpriteMap_MajorIsolation-sheet2-sheet_20
+  - first:
+      213: -8989282397529809246
+    second: SpriteMap_MajorIsolation-sheet2-sheet_21
+  - first:
+      213: 6951933553334837638
+    second: SpriteMap_MajorIsolation-sheet2-sheet_22
+  - first:
+      213: 6773834808017080643
+    second: SpriteMap_MajorIsolation-sheet2-sheet_23
+  - first:
+      213: -238079920265053522
+    second: SpriteMap_MajorIsolation-sheet2-sheet_24
+  - first:
+      213: 5276708758502132925
+    second: SpriteMap_MajorIsolation-sheet2-sheet_25
+  - first:
+      213: -4487502542503720130
+    second: SpriteMap_MajorIsolation-sheet2-sheet_26
+  - first:
+      213: -6085866959078496455
+    second: SpriteMap_MajorIsolation-sheet2-sheet_27
+  - first:
+      213: 1583565693045622555
+    second: SpriteMap_MajorIsolation-sheet2-sheet_28
+  - first:
+      213: -2140841692731847973
+    second: SpriteMap_MajorIsolation-sheet2-sheet_29
+  - first:
+      213: -4838582207979950714
+    second: SpriteMap_MajorIsolation-sheet2-sheet_30
+  - first:
+      213: -6649626209285860122
+    second: SpriteMap_MajorIsolation-sheet2-sheet_31
+  - first:
+      213: -483746951587574953
+    second: SpriteMap_MajorIsolation-sheet2-sheet_32
+  - first:
+      213: 7310273895945073066
+    second: SpriteMap_MajorIsolation-sheet2-sheet_33
+  - first:
+      213: 2625299237541176136
+    second: SpriteMap_MajorIsolation-sheet2-sheet_34
+  - first:
+      213: -7715093214339712258
+    second: SpriteMap_MajorIsolation-sheet2-sheet_35
+  - first:
+      213: -5523667300748551987
+    second: SpriteMap_MajorIsolation-sheet2-sheet_36
+  - first:
+      213: 6297290707150140849
+    second: SpriteMap_MajorIsolation-sheet2-sheet_37
+  - first:
+      213: 4011319107568687850
+    second: SpriteMap_MajorIsolation-sheet2-sheet_38
+  - first:
+      213: -2294345245218982280
+    second: SpriteMap_MajorIsolation-sheet2-sheet_39
+  - first:
+      213: 2370730739601916806
+    second: SpriteMap_MajorIsolation-sheet2-sheet_40
+  - first:
+      213: -5274211043092562911
+    second: SpriteMap_MajorIsolation-sheet2-sheet_41
+  - first:
+      213: 3271947286028907868
+    second: SpriteMap_MajorIsolation-sheet2-sheet_42
+  - first:
+      213: -6359712481618882648
+    second: SpriteMap_MajorIsolation-sheet2-sheet_43
+  - first:
+      213: -9064564860472949758
+    second: SpriteMap_MajorIsolation-sheet2-sheet_44
+  - first:
+      213: 4489911908762062319
+    second: SpriteMap_MajorIsolation-sheet2-sheet_45
+  - first:
+      213: -530525096371597949
+    second: SpriteMap_MajorIsolation-sheet2-sheet_46
+  - first:
+      213: 7269639297889443376
+    second: SpriteMap_MajorIsolation-sheet2-sheet_47
+  - first:
+      213: 2920715103132530320
+    second: SpriteMap_MajorIsolation-sheet2-sheet_48
+  - first:
+      213: -2583325802188049867
+    second: SpriteMap_MajorIsolation-sheet2-sheet_49
+  - first:
+      213: -7792727109597987212
+    second: SpriteMap_MajorIsolation-sheet2-sheet_50
+  - first:
+      213: 2593132485582204356
+    second: SpriteMap_MajorIsolation-sheet2-sheet_51
+  - first:
+      213: 8644303819760904930
+    second: SpriteMap_MajorIsolation-sheet2-sheet_52
+  - first:
+      213: -1779599595803277403
+    second: SpriteMap_MajorIsolation-sheet2-sheet_53
+  - first:
+      213: -6330017091233663488
+    second: SpriteMap_MajorIsolation-sheet2-sheet_54
+  - first:
+      213: 8771748892299598141
+    second: SpriteMap_MajorIsolation-sheet2-sheet_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaaaa025d99a7ebd0800000000000000
+      internalID: -2600923766631781714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3f136b211228eb0800000000000000
+      internalID: -4719173095281003571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f9bdb60685b6fe0800000000000000
+      internalID: -1194764104987074772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a44a7a7b287a350800000000000000
+      internalID: 6027930351561886208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d945048e4a97ac0800000000000000
+      internalID: -3856870288447464078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90eb06f3d255b5b0800000000000000
+      internalID: -5353281511740415846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f69ad8edc36099d0800000000000000
+      internalID: -2769604034806769932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca62dfc06d6414f80800000000000000
+      internalID: -8124134367644801364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401bcbf031d308de0800000000000000
+      internalID: -1332998337623969532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea926fd5874f80b0800000000000000
+      internalID: -5724277961060607263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83cf17287f7aae70800000000000000
+      internalID: 9127247748848927631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7724247568126fca0800000000000000
+      internalID: -5983558194041830793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8b57939243f2910800000000000000
+      internalID: 1814726526515919013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7b33142be52cf20800000000000000
+      internalID: 3441417184955578285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5d3ad5ef8371490800000000000000
+      internalID: -7775683566488005160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11fbfe56530538d0800000000000000
+      internalID: -2867381918255812324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc02a1436a81a8330800000000000000
+      internalID: 3713807944838160587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca900a8a96287d50800000000000000
+      internalID: 6735175687914691269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa90f3ae0bef4c160800000000000000
+      internalID: 7045035752911997354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f623e06ccf36ce440800000000000000
+      internalID: 4966454426388542063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a0b342eff76eec0800000000000000
+      internalID: -3537999727746676195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae50956947af3380800000000000000
+      internalID: -8989282397529809246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68164acdbba3a7060800000000000000
+      internalID: 6951933553334837638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341d80b5ede710e50800000000000000
+      internalID: 6773834808017080643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaab27ce29b22bcf0800000000000000
+      internalID: -238079920265053522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc46bd98a2aa3940800000000000000
+      internalID: 5276708758502132925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b4761a63039b1c0800000000000000
+      internalID: -4487502542503720130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937e6d9be38aa8ba0800000000000000
+      internalID: -6085866959078496455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17ca749b94f9f510800000000000000
+      internalID: 1583565693045622555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda4f58b2d33a42e0800000000000000
+      internalID: -2140841692731847973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d64d42e17e9dcb0800000000000000
+      internalID: -4838582207979950714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e49362a138c7b3a0800000000000000
+      internalID: -6649626209285860122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bc175e5b26949f0800000000000000
+      internalID: -483746951587574953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1fd9a706f437560800000000000000
+      internalID: 7310273895945073066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843eeb24fbfee6420800000000000000
+      internalID: 2625299237541176136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa314e099b7ee490800000000000000
+      internalID: -7715093214339712258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc811790bddf753b0800000000000000
+      internalID: -5523667300748551987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b57d0f9888746750800000000000000
+      internalID: 6297290707150140849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea5e57b9711ba730800000000000000
+      internalID: 4011319107568687850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876bd9ac729d820e0800000000000000
+      internalID: -2294345245218982280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68342180c0786e020800000000000000
+      internalID: 2370730739601916806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c7602100d3ec6b0800000000000000
+      internalID: -5274211043092562911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c557e8b98ba486d20800000000000000
+      internalID: 3271947286028907868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af0d737133cdb7a0800000000000000
+      internalID: -6359712481618882648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20485081942343280800000000000000
+      internalID: -9064564860472949758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_45
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed0f8aa71f5f4e30800000000000000
+      internalID: 4489911908762062319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_46
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d47565c3233a8f0800000000000000
+      internalID: -530525096371597949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e9bebdc62f2e460800000000000000
+      internalID: 7269639297889443376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096355469e6788820800000000000000
+      internalID: 2920715103132530320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532fa75bede262cd0800000000000000
+      internalID: -2583325802188049867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_50
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47efad04bfbaad390800000000000000
+      internalID: -7792727109597987212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_51
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd27a2b148acf320800000000000000
+      internalID: 2593132485582204356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_52
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaa66b468cb6f770800000000000000
+      internalID: 8644303819760904930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_53
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a787b9a8979d47e0800000000000000
+      internalID: -1779599595803277403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006bdde4ef24728a0800000000000000
+      internalID: -6330017091233663488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteMap_MajorIsolation-sheet2-sheet_55
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39917094238bb970800000000000000
+      internalID: 8771748892299598141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

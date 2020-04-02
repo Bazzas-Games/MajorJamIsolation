@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
         mousePos2D = Input.mousePosition;
         if (Input.GetButtonDown("Grab"))  // grab object if left clicked
         {
-            Debug.Log("Click");
             if(heldObject == null)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, grabbableObjects);
@@ -183,3 +182,5 @@ public class PlayerMovement : MonoBehaviour
         heldObject = null;
     }
 }
+
+

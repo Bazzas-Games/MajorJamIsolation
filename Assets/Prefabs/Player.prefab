@@ -102,10 +102,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8675180581944998755}
   - component: {fileID: 8675180581944998754}
+  - component: {fileID: 4224742864410867617}
   - component: {fileID: 8675180581944998752}
   - component: {fileID: 8675180581944998764}
   - component: {fileID: 8675180581944998765}
   - component: {fileID: 8675180581944998767}
+  - component: {fileID: 1290952618}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -144,17 +146,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldObject: {fileID: 0}
   holdPoint: {fileID: 8675180582509296415}
-  grabbableObjects:
-    serializedVersion: 2
-    m_Bits: 256
-  pushableWalls:
-    serializedVersion: 2
-    m_Bits: 2048
   grabDistance: 1
   maxForce: 20
   maxVel: 5
   pullbackDistance: 15000
   thrustForce: 1
+  breachLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  pushableWalls:
+    serializedVersion: 2
+    m_Bits: 2048
+  grabbableObjects:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &4224742864410867617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675180581944998753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60fd1441c63682444966638bf100b5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 701c6510c81b13e4c93d88c0a76cef13, type: 2}
+  currentRoom: {fileID: 0}
 --- !u!212 &8675180581944998752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -261,6 +280,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1290952618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675180581944998753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60fd1441c63682444966638bf100b5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 0}
+  currentRoom: {fileID: 0}
 --- !u!1 &8675180582509296412
 GameObject:
   m_ObjectHideFlags: 0

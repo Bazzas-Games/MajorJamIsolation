@@ -64,7 +64,6 @@ public class PowerBlock : MonoBehaviour
 
     void ConnectPower(Collision2D collision)
     {
-        Debug.Log("called from "+ name + ", unpowered cable " + collision.otherRigidbody.name + "_" + collision.otherCollider.name+ ", connecting to power source " + collision.rigidbody.name + "_" + collision.collider.name);
         Rigidbody2D unpoweredRb = collision.otherRigidbody;
         Rigidbody2D poweredRb = collision.rigidbody;
         Collider2D unpoweredCol = collision.otherCollider;
@@ -104,7 +103,6 @@ public class PowerBlock : MonoBehaviour
     public void DisconnectPower()
     {
         coolingDown = true;
-        Debug.Log("Disconnect called on " + name);
         isPowered = false;
 
         // turn on all of this block's colliders

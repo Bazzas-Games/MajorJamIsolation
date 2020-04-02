@@ -6,7 +6,13 @@ public class RoomController : MonoBehaviour
 {
     public List<HullBreach> breaches = new List<HullBreach>();
     public bool hasOxygen;
-
+    private Rigidbody2D rb;
+    
+    void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        gameObject.layer = LayerMask.NameToLayer("BreachChecker");
+    }
     
     void Update()
     {
@@ -22,17 +28,17 @@ public class RoomController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Breach"))
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Breach"))
         {
             breaches.Add(collider.GetComponent<HullBreach>());
-            Debug.Log("HullBreaches count: " + breaches.Count);
-            
+            Debug.Log("Discovered breach: " + collider.name + " in room "+ gameObject.name + ". Room total: " + breaches.Count);
+
+        }
+        else if (collider.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            collider.gameObject.GetComponent<AudioController>().currentRoom = this;
         }
     }
 
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        
-	}
 
 }

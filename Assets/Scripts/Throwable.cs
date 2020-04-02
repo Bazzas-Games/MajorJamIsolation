@@ -10,6 +10,7 @@ public class Throwable : MonoBehaviour
 
     void Start()
     {
+        gameObject.layer = LayerMask.NameToLayer("Grabbable");
         if (!isAnchored) rb = GetComponent<Rigidbody2D>();
         gameObject.layer = 8;
     }

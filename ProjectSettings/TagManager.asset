@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - PushOffWall
+  - Breach
   layers:
   - Default
   - TransparentFX

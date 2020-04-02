@@ -6,9 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public Throwable heldObject;
     public Transform holdPoint;
-    public LayerMask grabbableObjects;
-    public LayerMask pushableWalls;
-    public LayerMask breachLayer;
     public float grabDistance = 1f;
     public float maxForce = 1000f;
     public float maxVel = 5f;
@@ -17,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D rb;
+    public LayerMask breachLayer;
+    public LayerMask pushableWalls;
+    public LayerMask grabbableObjects;
     private Vector2 mousePos2D;
     private Vector2 mouseClickPos;
     private Vector2 aimDir = new Vector2();
@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        grabbableObjects = 1 << LayerMask.NameToLayer("Grabbable");
+        pushableWalls = 1 << LayerMask.NameToLayer("PushOffWall");
+        breachLayer = 1 << LayerMask.NameToLayer("Breach");
     }
 
     void Update()
@@ -45,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         mousePos2D = Input.mousePosition;
         if (Input.GetButtonDown("Grab"))  // grab object if left clicked
         {
+            Debug.Log("Click");
             if(heldObject == null)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, grabbableObjects);

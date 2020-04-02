@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    public HullBreach[] breaches;
+    public List<HullBreach> breaches = new List<HullBreach>();
     public bool hasOxygen;
 
     
@@ -18,6 +18,16 @@ public class RoomController : MonoBehaviour
             if(b.isBroken) hasHoles = true;
 		}
         hasOxygen = !hasHoles;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Breach"))
+        {
+            breaches.Add(collider.GetComponent<HullBreach>());
+            Debug.Log("HullBreaches count: " + breaches.Count);
+            
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision)

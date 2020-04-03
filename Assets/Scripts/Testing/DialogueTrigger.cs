@@ -22,6 +22,9 @@ public class DialogueTrigger : MonoBehaviour
             {
                d.Open(); 
 			}
-		}
+
+		    gameObject.SetActive(false);
+        
+        }
     }
 }

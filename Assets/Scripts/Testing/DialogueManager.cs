@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -53,12 +54,18 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
+        if(dialogueText.text == "> Mission Objectives Completed > Stand-by Mode Initiated")
+        {
+            SceneManager.LoadScene("Menu");  
+		}
+        
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
 		}
+       
 	}
 
     void EndDialogue()

@@ -7,6 +7,7 @@ TagManager:
   - Terrain
   - PushOffWall
   - Breach
+  - EndPlatform
   layers:
   - Default
   - TransparentFX

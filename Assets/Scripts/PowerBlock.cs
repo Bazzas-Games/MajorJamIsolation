@@ -25,14 +25,16 @@ public class PowerBlock : MonoBehaviour
         }
         if (isPowerSource || isPowerTarget) gameObject.layer = LayerMask.NameToLayer("PushOffWall");
         else gameObject.layer = LayerMask.NameToLayer("Grabbable");
-        anim = GetComponent<Animator>();
+        if(!isPowerSource)
+            anim = GetComponent<Animator>();
     }
 
 
     void Update()
     {
-        anim.SetBool("IsPowered", isPowered);
         if (isPowerSource) isPowered = true;
+        else anim.SetBool("IsPowered", isPowered);
+
         CheckPower();
         if (isPowerTarget)
         {

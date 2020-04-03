@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
-        if(dialogueText.text == "> Mission Objectives Completed > Stand-by Mode Initiated")
+        if(sentence.Contains( "End Game"))
         {
             SceneManager.LoadScene("Menu");  
 		}

@@ -14,7 +14,7 @@ public class PowerBlock : MonoBehaviour
 
     BoxCollider2D[] connectors;
     private Rigidbody2D rb;
-
+    private Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,12 +25,13 @@ public class PowerBlock : MonoBehaviour
         }
         if (isPowerSource || isPowerTarget) gameObject.layer = LayerMask.NameToLayer("PushOffWall");
         else gameObject.layer = LayerMask.NameToLayer("Grabbable");
-
+        anim = GetComponent<Animator>();
     }
 
 
     void Update()
     {
+        anim.SetBool("IsPowered", isPowered);
         if (isPowerSource) isPowered = true;
         CheckPower();
         if (isPowerTarget)

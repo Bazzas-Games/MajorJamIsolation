@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 184771742288468425}
   - component: {fileID: 184771742288468426}
   m_Layer: 13
-  m_Name: Breach
+  m_Name: Breach_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 24a2030d98da469499ac49ce07f5d4c2, type: 3}
+  m_Sprite: {fileID: 3372507132175163771, guid: 5fa540329067ace49b064d537e81c56d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

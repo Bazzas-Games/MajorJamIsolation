@@ -21715,12 +21715,12 @@ PrefabInstance:
     - target: {fileID: 8675180581944998755, guid: 6b457cd090a338c4fa382dde054e2ba2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 8675180581944998755, guid: 6b457cd090a338c4fa382dde054e2ba2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8675180581944998755, guid: 6b457cd090a338c4fa382dde054e2ba2,
         type: 3}
@@ -55824,94 +55824,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1044970096}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1072800243
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1072800244}
-  - component: {fileID: 1072800246}
-  - component: {fileID: 1072800245}
-  m_Layer: 0
-  m_Name: dialogueZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1072800244
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072800243}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.9955, y: -36.988, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1833653695}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1072800245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072800243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d05905b1978ceb741a8fda55a8122d87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Game Complete
-    sentences:
-    - '> Power Restored
-
-      > Oxygen Systems Online
-
-      > Course corrected
-      to Q32 x Z435 in Sector 18'
-    - '> Casualties [0]
-
-      > Damages [Repaired]
-
-      > Debris Clean-Up Initiated'
-    - '> Mission Objectives Completed
-
-      > Stand-by Initiated'
-  openDoors: []
---- !u!61 &1072800246
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072800243}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1077287115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101588,6 +101500,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833653695}
+  - component: {fileID: 1833653696}
+  - component: {fileID: 1833653694}
   m_Layer: 0
   m_Name: ChryoTrigger
   m_TagString: Untagged
@@ -101595,6 +101509,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!61 &1833653694
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833653693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &1833653695
 Transform:
   m_ObjectHideFlags: 0
@@ -101606,11 +101546,40 @@ Transform:
   m_LocalPosition: {x: -14, y: 7.52, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
-  - {fileID: 1072800244}
   - {fileID: 2139929410}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1833653696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833653693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05905b1978ceb741a8fda55a8122d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Game Complete
+    sentences:
+    - '> Power Restored
+
+      > Oxygen Systems Online
+
+      > Course corrected
+      to Q32 x Z435 in Sector 18'
+    - '> Casualties [0]
+
+      > Damages [Repaired]
+
+      > Debris Clean-Up Initiated'
+    - '> Mission Objectives Completed
+
+      > Stand-by Initiated'
+  openDoors: []
 --- !u!1001 &1837094211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103594,7 +103563,7 @@ RectTransform:
   - {fileID: 1112949857}
   - {fileID: 918130817}
   m_Father: {fileID: 1833653695}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

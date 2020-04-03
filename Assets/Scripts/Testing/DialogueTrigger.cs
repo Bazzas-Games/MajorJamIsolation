@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-
+    public Door[] openDoors;
 
     public void TriggerDialogue ()
     {
@@ -17,6 +17,11 @@ public class DialogueTrigger : MonoBehaviour
         if(other.gameObject.name == "Player")
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            // on button "press"
+            foreach (Door d in openDoors)
+            {
+               d.Open(); 
+			}
 		}
     }
 }

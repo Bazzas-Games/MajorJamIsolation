@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    public List<HullBreach> breaches = new List<HullBreach>();
     public bool hasOxygen;
     public PowerBlock[] doorPlugs;
     public Door[] exitDoors;
+
     private Rigidbody2D rb;
-    
+    private List<HullBreach> breaches = new List<HullBreach>();
+
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();

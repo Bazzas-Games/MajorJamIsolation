@@ -6,43 +6,60 @@ public class PowerBlock : MonoBehaviour
 {
     public bool isPowered = false;
     public bool coolingDown = false;
-    BoxCollider2D[] connectors;
-    public Collider2D prev;
-    public List<Collider2D> next = new List<Collider2D>();
     public bool isPowerSource = false;
+    public bool isPowerTarget = false;
+    public Collider2D prev;
+    public Collider2D targetCollider;
+    public List<Collider2D> next = new List<Collider2D>();
 
+    BoxCollider2D[] connectors;
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         connectors = GetComponentsInChildren<BoxCollider2D>();
-        foreach(BoxCollider2D b in connectors)
+        foreach (BoxCollider2D b in connectors)
         {
             b.gameObject.layer = LayerMask.NameToLayer("PowerConnectors");
         }
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        if (isPowerSource || isPowerTarget) gameObject.layer = LayerMask.NameToLayer("PushOffWall");
+        else gameObject.layer = LayerMask.NameToLayer("Grabbable");
+
     }
 
-    
+
     void Update()
     {
         if (isPowerSource) isPowered = true;
         CheckPower();
+        if (isPowerTarget)
+        {
+            Collider2D checkCollider = Physics2D.OverlapBox(targetCollider.bounds.center, targetCollider.bounds.size, gameObject.transform.rotation.eulerAngles.z, LayerMask.GetMask("PowerConnectors"));
+            if(checkCollider != null)
+            {
+                if (checkCollider.GetComponentInParent<PowerBlock>().isPowered)
+                {
+                    ConnectPower(checkCollider);
+                }
+            }
+        }
     }
     
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log(name + " colliding with " + collision.otherRigidbody.name);
         if(collision.collider.gameObject.layer == LayerMask.NameToLayer("PowerConnectors")&& 
-            !isPowered && !coolingDown &&
-            collision.rigidbody.GetComponent<PowerBlock>().isPowered){
+            !isPowered && !coolingDown){
+
             if (collision.collider.GetComponentInParent<PowerBlock>().isPowered)
             {
                 ConnectPower(collision);
             }
         }
     }
+
 
     void OnCollisionExit2D(Collision2D collision)
     {
@@ -68,6 +85,43 @@ public class PowerBlock : MonoBehaviour
         Rigidbody2D poweredRb = collision.rigidbody;
         Collider2D unpoweredCol = collision.otherCollider;
         Collider2D poweredCol = collision.collider;
+        PowerBlock unpoweredBlock = unpoweredRb.GetComponent<PowerBlock>();
+        PowerBlock poweredBlock = poweredRb.GetComponent<PowerBlock>();
+
+
+        // physically lock 
+        unpoweredRb.velocity = Vector2.zero;
+        unpoweredRb.angularVelocity = 0;
+        unpoweredRb.isKinematic = true;
+        poweredRb.velocity = Vector2.zero;
+        poweredRb.angularVelocity = 0;
+        poweredRb.isKinematic = true;
+
+        Vector3 rot = unpoweredRb.transform.rotation.eulerAngles;
+        rot.z = Mathf.Round(rot.z / 90) * 90;
+        unpoweredRb.transform.eulerAngles = rot;
+        unpoweredRb.transform.parent = poweredCol.transform;
+        unpoweredRb.transform.localPosition = Vector2.zero;
+        // end lock
+
+        // disable only the two connected colliders
+        unpoweredCol.enabled = false;
+        poweredCol.enabled = false;
+
+        // store references to each collider object for disconnect later
+        unpoweredBlock.prev = poweredCol;
+        poweredBlock.next.Add(unpoweredCol);
+
+        // power up block
+        unpoweredBlock.isPowered = true;
+    }
+
+    void ConnectPower(Collider2D other)
+    {
+        Rigidbody2D unpoweredRb = rb;
+        Rigidbody2D poweredRb = other.attachedRigidbody;
+        Collider2D unpoweredCol = targetCollider;
+        Collider2D poweredCol = other;
         PowerBlock unpoweredBlock = unpoweredRb.GetComponent<PowerBlock>();
         PowerBlock poweredBlock = poweredRb.GetComponent<PowerBlock>();
 
@@ -126,6 +180,6 @@ public class PowerBlock : MonoBehaviour
 
         // physically unlock
         transform.parent = null;
-        rb.isKinematic = false;        
+        if(!isPowerTarget) rb.isKinematic = false;        
     }
 }

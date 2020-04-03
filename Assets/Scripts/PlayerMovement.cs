@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Throwable heldObject;
     public Transform holdPoint;
+    public Transform grabPoint;
     public float grabDistance = 1f;
     public float maxForce = 1000f;
     public float maxVel = 5f;
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(heldObject == null)
             {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, grabbableObjects);
+                RaycastHit2D hit = Physics2D.Raycast(grabPoint.position, aimDir, grabDistance, grabbableObjects);
                 if(hit.collider != null && hit.collider.GetComponent<Throwable>() != null)
                 {
                     
@@ -59,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (heldObject.canPatchBreach)
             {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, aimDir, grabDistance, breachLayer);
+                RaycastHit2D hit = Physics2D.Raycast(grabPoint.position, aimDir, grabDistance, breachLayer);
                 
                 if (hit.collider != null)
                 {
@@ -100,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
     {
         dragDirection = Camera.main.WorldToScreenPoint(transform.position);
         dragDirection = dragDirection - mouseClickPos;
-        dragDistRaw = Vector2.Dot(dragDirection, mousePos2D - mouseClickPos);
+        dragDistRaw = Vector2.Dot(dragDirection.normalized * 40, mousePos2D - mouseClickPos);
         dragDist = Mathf.Clamp(dragDistRaw, 0, pullbackDistance);
         dragMult = dragDist / pullbackDistance;
         animator.SetBool("isDragging", true);

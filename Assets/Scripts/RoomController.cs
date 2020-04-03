@@ -6,6 +6,8 @@ public class RoomController : MonoBehaviour
 {
     public List<HullBreach> breaches = new List<HullBreach>();
     public bool hasOxygen;
+    public PowerBlock[] doorPlugs;
+    public Door[] exitDoors;
     private Rigidbody2D rb;
     
     void Start()
@@ -17,13 +19,27 @@ public class RoomController : MonoBehaviour
     void Update()
     {
         bool hasHoles = false;
-
-        hasHoles = false;
         foreach(HullBreach b in breaches)
         {
             if(b.isBroken) hasHoles = true;
 		}
         hasOxygen = !hasHoles;
+
+
+        bool hasPower = true;
+        foreach(PowerBlock p in doorPlugs)
+        {
+            if (!p.isPowered) hasPower = false;
+        }
+
+
+        if(hasOxygen && hasPower)
+        {
+            foreach(Door d in exitDoors)
+            {
+                d.Open();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)

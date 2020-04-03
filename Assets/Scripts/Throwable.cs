@@ -12,5 +12,8 @@ public class Throwable : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("Grabbable");
         rb = GetComponent<Rigidbody2D>();
         gameObject.layer = 8;
+        rb.angularDrag = 0f;
+
+        rb.AddTorque(Random.Range(-50f, 50f));
     }
 }

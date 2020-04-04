@@ -159,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
 
         heldObject.rb.AddForce(aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
         rb.AddForce(-1 * aimDir.normalized * maxForce * dragMult, ForceMode2D.Impulse);
-        holdPoint.rotation = Quaternion.identity;
+//        holdPoint.rotation = Quaternion.identity;
 
         heldObject = null;
     }

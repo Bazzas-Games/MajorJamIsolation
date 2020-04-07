@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public static bool GameIsRunning = true;
     public GameObject pauseMenuUI;
 
     // Update is called once per frame
@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
         // When "Escape" is pressed, Resume game if Pause. Pause game if not.
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(GameIsPaused)
+            if(GameIsRunning)
             {
                Resume(); 
 			} else
@@ -26,22 +26,22 @@ public class PauseMenu : MonoBehaviour
 
     // Bring Down Pause Mene.
     // Unfreeze Time in Game.
-    // Change GameIsPaused to False.
+    // Change GameIsRunning to true.
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(true);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        GameIsRunning = true;
 	}
 
     // Bring up Pause Menu.
     // Freeze Time in Game.
-    // Change GameIsPaused to True.
+    // Change GameIsRunning to false.
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        GameIsRunning = false;
 	}
 
     public void LoadMenu()

@@ -13,8 +13,8 @@ public class MainMenu : MonoBehaviour
             Time.timeScale = 1f;
 		}
 
-        SceneManager.UnloadSceneAsync("Menu");
-        SceneManager.LoadSceneAsync("Level1");
+        //SceneManager.UnloadScene("Menu");
+        SceneManager.LoadScene("Level1");
 	}
 
     public void QuitGame ()

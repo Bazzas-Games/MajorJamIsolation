@@ -7,7 +7,14 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+
+        if (PauseMenu.GameIsPaused)
+        {
+            Time.timeScale = 1f;
+		}
+
+        SceneManager.UnloadSceneAsync("Menu");
+        SceneManager.LoadSceneAsync("Level1");
 	}
 
     public void QuitGame ()

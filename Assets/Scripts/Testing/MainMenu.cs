@@ -12,10 +12,10 @@ public class MainMenu : MonoBehaviour
         {
             Time.timeScale = 1f;
 		}
-
-        //SceneManager.UnloadScene("Menu");
-        SceneManager.LoadScene("Level1");
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
+
 
     public void QuitGame ()
     {

@@ -23980,11 +23980,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 36b74e9cb108bba4391bdc49383fc6d1, type: 3}
-    m_FontSize: 32
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 64
+    m_MinSize: 0
+    m_MaxSize: 128
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -30815,13 +30815,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: odyssey:-/.config/bootsequence.init
     sentences:
     - '> Booting Maintenance Unit 04DA...'
-    - '> Situation: flight path disrupted. Cause: uncharted mass in nebula'
-    - "> Tasks: \r\n    >> Prevent depletion of oxygen supplies\r\n    >> Jump-start
-      power generator\r\n    >> Correct flight course\r\n    >> Ensure preservation
-      of hibernating crew"
+    - '> Situation: Flight path disrupted.
+
+      > Cause: Uncharted mass in nebula'
+    - "> Tasks:\n\n>> Prevent depletion of oxygen supplies\r.\n>> Jump-start power
+      generator\r.\n>> Correct flight course\r.\n>> Ensure preservation of hibernating
+      crew."
   openDoors: []
 --- !u!1001 &1077287115
 PrefabInstance:
@@ -66639,8 +66641,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64
-  m_fontSizeBase: 64
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -68858,8 +68860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.005126953, y: -0.0025634766}
-  m_SizeDelta: {x: -1128.8, y: -632.1}
+  m_AnchoredPosition: {x: 0.0025634766, y: 234}
+  m_SizeDelta: {x: -419.99, y: -632.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126539079
 MonoBehaviour:
@@ -68880,11 +68882,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 575049b018dabeb47b1e68bd90215ebb, type: 3}
-    m_FontSize: 64
+    m_Font: {fileID: 12800000, guid: 36b74e9cb108bba4391bdc49383fc6d1, type: 3}
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 0
     m_MaxSize: 64
     m_Alignment: 0
     m_AlignByGeometry: 0

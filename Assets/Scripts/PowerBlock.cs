@@ -11,10 +11,12 @@ public class PowerBlock : MonoBehaviour
     public Collider2D prev;
     public Collider2D targetCollider;
     public List<Collider2D> next = new List<Collider2D>();
+    public ParticleSystem sparks;
 
     BoxCollider2D[] connectors;
     private Rigidbody2D rb;
     private Animator anim;
+    private List<ParticleSystem> particleSystems = new List<ParticleSystem>();
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +29,11 @@ public class PowerBlock : MonoBehaviour
         else gameObject.layer = LayerMask.NameToLayer("Grabbable");
         if(!isPowerSource)
             anim = GetComponent<Animator>();
+
+        foreach(BoxCollider2D b in connectors)
+        {
+            Instantiate(sparks, b.transform);
+        }
     }
 
 
@@ -34,6 +41,20 @@ public class PowerBlock : MonoBehaviour
     {
         if (isPowerSource) isPowered = true;
         else anim.SetBool("IsPowered", isPowered);
+
+        if (isPowered)
+        {
+            foreach (BoxCollider2D b in connectors)
+            {
+                ParticleSystem.EmissionModule e = GetComponentInChildren<ParticleSystem>().emission;
+                if (b.enabled)
+                {
+
+                    e.enabled = true;
+                }
+                else e.enabled = false;
+            }
+        }
 
         CheckPower();
         if (isPowerTarget)
